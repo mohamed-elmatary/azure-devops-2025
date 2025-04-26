@@ -39,7 +39,7 @@ def predict():
         scaled_payload = scale(inference_payload)
         prediction = list(clf.predict(scaled_payload))
         return jsonify({'prediction': prediction})
-    except Exception as e:
+    except Exception as e:  # noqa: W0718  # Catching broad exception because this project devops test
         print(f"Unexpected error: {e}")
 
 
