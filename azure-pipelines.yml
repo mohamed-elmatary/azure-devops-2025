@@ -12,12 +12,10 @@ variables:
   poolName: 'myAgentPool'
 
   # Environment name
-  environmentName: 'staging'
+  environmentName: 'flask-ml-service'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
-
-  pythonVersion: '3.11'
 
 stages:
 - stage: Build
@@ -27,19 +25,19 @@ stages:
     pool:
       name: $(poolName)
     steps:
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: '$(pythonVersion)'
-      displayName: 'Use Python $(pythonVersion)'
-
     - script: |
-        python -m venv antenv
-        source antenv/bin/activate
-        python -m pip install --upgrade pip
-        pip install setup
-        pip install -r requirements.txt
+        python3.11 -m pip install --upgrade pip
+        python3.11 -m pip install setup
+        python3.11 -m pip install -r requirements.txt
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
+
+    - script: |
+        export PATH=$HOME/.local/bin:$PATH
+        make install
+        make lint
+      workingDirectory: $(projectRoot)
+      displayName: 'Run lint tests'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
@@ -67,12 +65,6 @@ stages:
       runOnce:
         deploy:
           steps:
-
-          - task: UsePythonVersion@0
-            inputs:
-              versionSpec: '$(pythonVersion)'
-            displayName: 'Use Python version'
-
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : $(webAppName)'
             inputs:
