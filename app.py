@@ -33,9 +33,6 @@ def predict():
         print(f"Model file not found: {e}")
     except TerminatedWorkerError as e:
         print(f"Joblib worker crashed: {e}")
-    except Exception as e:
-        # Catch all as a last resort
-        print(f"Unexpected error loading model: {e}")
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
     inference_payload = pd.DataFrame(json_payload)
