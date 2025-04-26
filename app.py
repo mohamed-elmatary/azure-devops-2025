@@ -39,16 +39,6 @@ def predict():
         scaled_payload = scale(inference_payload)
         prediction = list(clf.predict(scaled_payload))
         return jsonify({'prediction': prediction})
-    
-    except FileNotFoundError as e:
-        print(f"Model not found: {e}")
-        # Handle the error, maybe exit or fallback
-    
-    except ValueError as e:
-        print(f"Value error: {e}")
-        # Handle ValueError
-
-        # Catching general exceptions only as a fallback
     except Exception as e:
         print(f"Unexpected error: {e}")
         # Optionally handle this case, but avoid too broad catching unless really necessary
