@@ -3,6 +3,7 @@ from flask.logging import create_logger
 import logging
 import pandas as pd
 import joblib
+from joblib.externals.loky.process_executor import TerminatedWorkerError
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
@@ -27,16 +28,10 @@ def home():
 def predict():
     # Performs an sklearn prediction
     try:
-        # Load pretrained model as clf. Try any one model. 
         clf = joblib.load("./Housing_price_model/LinearRegression.joblib")
-        # clf = joblib.load("./Housing_price_model/StochasticGradientDescent.joblib")
-        # clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
-    except FileNotFoundError as e:
-        print(f"Model file not found: {e}")
-    except Exception as e:
-        # Catch all as a last resort
+    except Exception as e:  # noqa: W0718
+        # Catching broad Exception because model load errors can vary
         print(f"Unexpected error loading model: {e}")
-
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
     inference_payload = pd.DataFrame(json_payload)
