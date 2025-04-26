@@ -29,8 +29,12 @@ def predict():
     # Performs an sklearn prediction
     try:
         clf = joblib.load("./Housing_price_model/LinearRegression.joblib")
-    except Exception as e:  # noqa: W0718
-        # Catching broad Exception because model load errors can vary
+    except FileNotFoundError as e:
+        print(f"Model file not found: {e}")
+    except TerminatedWorkerError as e:
+        print(f"Joblib worker crashed: {e}")
+    except Exception as e:
+        # Catch all as a last resort
         print(f"Unexpected error loading model: {e}")
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
