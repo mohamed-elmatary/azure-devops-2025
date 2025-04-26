@@ -41,9 +41,6 @@ def predict():
         return jsonify({'prediction': prediction})
     except Exception as e:
         print(f"Unexpected error: {e}")
-        # Optionally handle this case, but avoid too broad catching unless really necessary
-        LOG.info("JSON payload: %s json_payload")
-        return "Model not loaded"
 
 
 if __name__ == "__main__":
