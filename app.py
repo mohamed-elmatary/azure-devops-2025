@@ -32,7 +32,18 @@ def predict():
         clf = joblib.load("./Housing_price_model/LinearRegression.joblib")
         # clf = joblib.load("./Housing_price_model/StochasticGradientDescent.joblib")
         # clf = joblib.load("./Housing_price_model/GradientBoostingRegressor.joblib")
-    except Exception  as e:
+    except FileNotFoundError as e:
+        print(f"Model not found: {e}")
+        # Handle the error, maybe exit or fallback
+    
+    except ValueError as e:
+        print(f"Value error: {e}")
+        # Handle ValueError
+
+        # Catching general exceptions only as a fallback
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        # Optionally handle this case, but avoid too broad catching unless really necessary
         LOG.info("JSON payload: %s json_payload")
         return "Model not loaded"
 
