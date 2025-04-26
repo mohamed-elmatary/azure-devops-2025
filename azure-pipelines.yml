@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: myAgentPool
+  vmImage: myAgentVM
 
 steps:
 - script: echo Hello, world!
