@@ -15,7 +15,16 @@
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
-* Project running on Azure App Service
+to run this project locally
+you need to run this commands in directory of project
+1- python3 -m venv venv  
+2-  * - venv\Scripts\activate  (windows)
+    * - source venv/bin/activate  (linux or mac)
+3- pip install -r requirements.txt  
+
+to Upload this project to AzureAppService
+az webapp up --sku F1 --name "name of app" --resource-group "your resource group"
+
 
 * Project cloned into Azure Cloud Shell
 
