@@ -26,7 +26,8 @@ stages:
       name: $(poolName)
     steps:
     - script: |
-        python3.11 -m pip install --upgrade pip
+        python -m venv antenv
+        source antenv/bin/activate
         python3.11 -m pip install setup
         python3.11 -m pip install -r requirements.txt
       workingDirectory: $(projectRoot)
