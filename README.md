@@ -29,7 +29,22 @@ Output of a test run
 ![Output of a test run](/images/make%20all.png)
 
 Successful deploy of the project in Azure Pipelines. Note the official documentation should be referred to and double checked as you setup CI/CD.
-![Successful deploy of the project in Azure Pipelines](/images/.png)
+![Successful deploy of the project in Azure Pipelines](/images/Configure%20Azure%20Pipeline.png)
+![Successful deploy of the project in Azure Pipelines](/images/Configure%20Azure%20Pipeline%202.png)
+![Successful deploy of the project in Azure Pipelines](/images/Configure%20Azure%20Pipeline%203.png)
+![Successful deploy of the project in Azure Pipelines](/images/Configure%20Azure%20Pipeline%204.png)
+![Successful deploy of the project in Azure Pipelines](/images/Configure%20Azure%20Pipeline%205.png)
+![Successful deploy of the project in Azure Pipelines](/images/Configure%20Azure%20Pipeline%206.png)
+![Successful deploy of the project in Azure Pipelines](/images/run%20Azure%20Pipeline%201.png)
+![Successful deploy of the project in Azure Pipelines](/images/run%20Azure%20Pipeline%202.png)
+![Successful deploy of the project in Azure Pipelines](/images/run%20Azure%20Pipeline3.png)
+![Successful deploy of the project in Azure Pipelines](/images/run%20Azure%20Pipeline4.png)
+![Successful deploy of the project in Azure Pipelines](/images/run%20Azure%20Pipeline5.png)
+
+
+
+
+
 
 
 
