@@ -29,10 +29,14 @@ Output of a test run
 ![Output of a test run](/images/make%20all.png)
 
 Successful deploy of the project in Azure Pipelines. Note the official documentation should be referred to and double checked as you setup CI/CD.
+![Successful deploy of the project in Azure Pipelines](/images/.png)
 
 
 
 Running Azure App Service from Azure Pipelines automatic deployment
+![Running Azure App Service from Azure Pipelines automatic deployment](/images/Running%20Azure%20App%20Service%20from%20Azure%20Pipelines%20automatic%20deployment%201.png)
+![Running Azure App Service from Azure Pipelines automatic deployment](/images/Running%20Azure%20App%20Service%20from%20Azure%20Pipelines%20automatic%20deployment%202.png)
+
 
 Successful prediction from deployed flask app in Azure Cloud Shell. Use this file as a template for the deployed prediction. The output should look similar to this:
 
