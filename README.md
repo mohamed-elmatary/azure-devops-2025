@@ -10,27 +10,38 @@ https://trello.com/b/erCPJgsY/udacitytrelloboard
 https://docs.google.com/spreadsheets/d/1MGg4M2Df5_cHMMOgmWgezsv3A773lf3z9SJlQi71MQ8/edit?usp=sharing
 
 
-<TODO: Instructions for running the Python project. How could a user with no context run this project without asking you for any help. Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
-
 Project running on Azure App Service
-![Project running on Azure App Service](/images/)
+![Project running on Azure App Service](/images/Web_App_Running_1.png)
+![Project running on Azure App Service](/images/Web_App_Running_2.png)
 
 Project cloned into Azure Cloud Shell
 
+![Project cloned into Azure Cloud Shell](/images/Clone%20My%20Repo.png)
+
+
+
 Passing tests that are displayed after running the make all command from the Makefile
 
+![Passing tests that are displayed after running the make all command from the Makefile](/images/make%20all.png)
+
+
 Output of a test run
+![Output of a test run](/images/make%20all.png)
 
 Successful deploy of the project in Azure Pipelines. Note the official documentation should be referred to and double checked as you setup CI/CD.
+
+
 
 Running Azure App Service from Azure Pipelines automatic deployment
 
 Successful prediction from deployed flask app in Azure Cloud Shell. Use this file as a template for the deployed prediction. The output should look similar to this:
 
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
+![Successful prediction from deployed flask app in Azure Cloud Shell](/images/Successful%20prediction%20from%20deployed%20flask%20app%20in%20Azure%20Cloud%20Shell.png)
+
 Output of streamed log files from deployed application
+
+![Output of streamed log files from deployed application](/images/webApp_log1.png)
+![Output of streamed log files from deployed application](/images/webApp_log2.png)
 
 
 ## Enhancements
