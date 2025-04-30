@@ -3,7 +3,6 @@ this is my repo 2025
 
 [![Python application test with GitHub Actions](https://github.com/mohamed-elmatary/azure-devops-2025/actions/workflows/main.yml/badge.svg)](https://github.com/mohamed-elmatary/azure-devops-2025/actions/workflows/main.yml)
 
-
 * A link to a Trello board for the project
 https://trello.com/b/erCPJgsY/udacitytrelloboard
 * A link to a spreadsheet that includes the original and final project plan>
