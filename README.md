@@ -68,6 +68,6 @@ this could be a Kubernetes version of this project.and use another framework lik
 
 ## Demo 
 
-https://www.youtube.com/watch?v=YtPeBlw1QCE
+https://youtu.be/QTjk4a-d9ZI
 
 
