@@ -13,3 +13,4 @@ python app.py
 az webapp up --sku F1 --name "flask-sklearn-2025" --resource-group "Azuredevops"
 # to see logs from app
 az webapp log tail --name "flask-sklearn-2025" --resource-group "Azuredevops"
+
