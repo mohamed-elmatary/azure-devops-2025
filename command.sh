@@ -14,3 +14,8 @@ az webapp up --sku F1 --name "flask-sklearn-2025" --resource-group "Azuredevops"
 # to see logs from app
 az webapp log tail --name "flask-sklearn-2025" --resource-group "Azuredevops"
 
+git add .
+git commit -m "change to v2"
+git push origin main
+./make_predict_azure_app.sh
+cat ./make_predict_azure_app.sh
